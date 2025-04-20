@@ -4,6 +4,13 @@
 .minor-section {
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
+    border: solid 1px #050000;
+    background-color: #0f0c00;
   }
+img {
+  width: 800px;
+}
+.images {
+  font-family: 'Courier New', Courier, monospace
+  ;
+}
