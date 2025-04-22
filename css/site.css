@@ -13,7 +13,11 @@ body {
   width: 500px;
   align-content: center;
 }
-h1,h2,h3 {
+#mypic {
+  width: 500px;
+}
+
+h1,h2 {
   font-family: papyrus;
   color: #ffffff;
 }
@@ -36,9 +40,13 @@ h1 {
 }
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+
+.major-section {
+  display:inline-flex;
+}
 .minor-section {
   
-  width: 750px;
+  width: 670px;
   padding: 5px;
   margin-bottom: 10px;
   border:solid 1px #3f0404;
@@ -46,10 +54,91 @@ h1 {
   font-size: large;
 }
 
-.aside {
-  display: inline;
-  float:top;
-  width: 200px;
-  padding: 3px;
-
+h3 { 
+  font-family: papyrus;
+  color: #ffffff;
+  text-align: center;
+  font-size: 150%;
 }
+
+#vinyl-gallery * {
+  all: unset;
+}
+
+#vinyl-gallery {
+  all: initial!important;
+  width: 100%!important;
+  height: 230px!important;
+  margin: 30px 0!important;
+  display: flex!important;
+  flex-direction: row!important;
+  position: relative!important;
+  margin-left: -6px!important;
+}
+
+#vinyl-gallery .vinyl {
+    all:unset!important;
+  perspective: 500px !important;
+  width: 18px!important;
+  transition: width 0.5s!important;
+}
+
+#vinyl-gallery .vinyl:hover {
+  width: 148px!important;
+}
+
+#vinyl-gallery img {
+    all:unset!important;
+  transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s!important;
+  width: 180px!important;
+  height: 180px!important;
+  transform: rotateX(0deg) rotateY(25deg)!important;
+  transform-style: preserve-3d!important;
+  border-radius: 4px!important;
+  border: 2px solid rgba(0, 0, 0, 0.1)!important;
+object-fit: cover!important;
+}
+
+#vinyl-gallery .vinyl:hover img {
+  transform: rotateX(0deg) rotateY(10deg)!important;
+  width: 188px!important;
+  height: 188px!important;
+  margin-top: -2px!important;
+}
+
+#vinyl-gallery .title {
+  color: #000000;
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  padding-left: 6px;
+}
+
+#vinyl-gallery .vinyl:nth-child(n):hover + .title {
+  visibility: visible;
+}
+
+  @keyframes flying-santa{
+    from{ left:-400px; }
+    to{ left:calc(100% + 20px); }
+  }
+  #santa{
+    position: fixed;
+    left: -400px;
+    top: 500px;
+    width: 500px;
+    animation: flying-santa 7s infinite linear;
+    pointer-events: none;
+  }
+
+  #cc{
+    float:right;
+    max-height: 250px;
+    position: fixed;
+    right: 1px;
+    bottom: 0px;
+    z-index: 400;
+  }
