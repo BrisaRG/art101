@@ -4,22 +4,23 @@
 
 /* we can select an html element tag, in this case "body" will apply to the whole document */
 body {
-  background-color: #b60e0e;
-  font-family: papyrus;
+  background-color: #070707;
+  font-family: 'Courier New', Courier, monospace;
   color:#ffffff;
 }
 
-#shadow {
-  width: 500px;
-  align-content: center;
+.shadow {
+  width: 300px;
+  display: inline-flex;
 }
 #mypic {
   width: 500px;
 }
 
-h1,h2 {
-  font-family: papyrus;
-  color: #ffffff;
+h1,h2,h3,h4,h5 {
+  font-family:'courier new', courier, monospace;
+  text-shadow: #ffffff 0px 0px 10PX;
+  color: #0f0000;
 }
 
 /* and we can have rules that overlap other rules, both take effect */
@@ -29,13 +30,31 @@ h1 {
   font-size: 200%;
 }
 
+h3, h4 {
+  font-size: 150%;
+  text-align: center;
+  padding: 20px;
+  border-style: inset;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffffff;
+  background-color: #000000;
+  background: linear-gradient(to bottom, #450808, #dd1d1d);
+}
+
+.blinkies {
+  border-style: inset;
+  border-radius: 10px;
+  background-color: #0c0000;
+}
+
 /* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
 #content {
-  font-family: papyrus;
+  font-family: 'Courier New', Courier, monospace;
   color: #ffffff;;
   margin: 5px;
-  padding: 10px;
-  border: solid 1px #6c0c0c;
+  padding: 10x;
+  border: inset 1px #f00b0b;
+  border-radius: 10px;
   background-image: url(https://i.pinimg.com/736x/13/56/e6/1356e68cf40ffb2a10cd31c1dad9030d.jpg);
 }
 
@@ -44,21 +63,26 @@ h1 {
 .major-section {
   display:inline-flex;
 }
-.minor-section {
-  
+.minor-section { 
   width: 670px;
   padding: 5px;
-  margin-bottom: 10px;
-  border:solid 1px #3f0404;
-  background-color: #000a02;
+  margin-bottom: 20px;
+  border:solid 3px #000000;
+  border-style:inherit;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000000;
   font-size: large;
 }
 
-h3 { 
-  font-family: papyrus;
-  color: #ffffff;
-  text-align: center;
-  font-size: 150%;
+
+.assignments {
+  width: auto;
+  border: solid 10px #000000;
+  padding: 20px;
+  margin: 5px;
+  border: solid 10px #000000;
+  border-style:inherit; 
+  border-radius: 10px;
 }
 
 #vinyl-gallery * {
@@ -121,16 +145,17 @@ object-fit: cover!important;
   visibility: visible;
 }
 
-  @keyframes flying-santa{
+  @keyframes flying-sonic{
     from{ left:-400px; }
     to{ left:calc(100% + 20px); }
   }
-  #santa{
+  
+  #sonic-gif{
     position: fixed;
     left: -400px;
     top: 500px;
     width: 500px;
-    animation: flying-santa 7s infinite linear;
+    animation: flying-sonic 7s infinite linear;
     pointer-events: none;
   }
 

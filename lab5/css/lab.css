@@ -2,8 +2,32 @@
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
+    display: block;
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
+    border: solid 1px #0d0d0d;
+    background-color: #070600;
+
   }
+
+.container {
+  display:grid;
+  grid-template-columns: auto auto;
+}
+
+h3 {
+  
+  padding: 5px;
+  text-align: left;
+  
+}
+
+#content {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.carpic {
+  display: grid;
+  width: 200px;
+  height: auto;
+}
